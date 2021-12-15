@@ -1,8 +1,8 @@
 {
-  "name": "react-user-manager",
+  "name": "connection-fb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Jackie098.github.io/react-manager-user",
+  "homepage": "https://Jackie098.github.io/connection-fb",
   "dependencies": {
     "@iconify/react": "^3.0.1",
     "@testing-library/jest-dom": "^5.11.4",
