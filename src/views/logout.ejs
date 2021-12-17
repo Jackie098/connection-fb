@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook Login JavaScript Example</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1040241466758280',
+        xfbml      : true,
+        version    : 'v12.0',
+        apiKey     : '4449118298518715'
+      });
+    };
+
+    function fbLogoutUser() {
+      FB.getLoginStatus(function(response) {
+          if (response && response.status === 'connected') {
+              FB.logout(function(response) {
+                  document.location.reload();
+              });
+          } else if (response.status === 'not_authorized') 
+              {
+                  FB.logout(function(response) {
+                  document.location.reload();
+                  });
+              }
+      });
+    }
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  
+  <button onclick=fbLogoutUser()>Logout</button>
+</body>
+</html>
